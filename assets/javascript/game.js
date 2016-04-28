@@ -9,13 +9,14 @@ var fruitWords = ['banana', 'tomato', 'apple', 'orange', 'kiwi', 'strawberry', '
 var currentWord = fruitWords[Math.floor(Math.random() * fruitWords.length)];
    console.log(currentWord);
 
+var guessedLetter = [];
+
 document.onkeyup = function(event) 
 {
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log(userGuess);
 
-	document.getElementById('guessed').appendHTML = userGuess;
+	guessedLetter.push(userGuess);
 
+	document.getElementById('guessed').innerHTML = "Letters Already Guessed " + guessedLetter;
 }
-
-
