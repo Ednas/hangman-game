@@ -16,7 +16,14 @@ document.onkeyup = function(event)
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
 	console.log(userGuess);
 
-	guessedLetter.push(userGuess);
+	guessedLetter.push(" " + userGuess);
 
 	document.getElementById('guessed').innerHTML = "Letters Already Guessed " + guessedLetter;
 }
+
+var currentLetters = currentWord.split("");
+console.log(currentLetters);
+
+if (guessedLetter == currentLetters){
+	console.log("Works");
+};
